@@ -1,7 +1,7 @@
-﻿using BeneathTheNight.Data.Database;
+﻿using PhoneInterfaceCode.Database;
 using UnityEngine;
 
-namespace BeneathTheNight.StateMachine
+namespace PhoneInterfaceCode.StateMachine
 {
     /// <summary>
     /// This class is the base class for all state machine states 

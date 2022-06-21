@@ -2,7 +2,7 @@
 using UnityEngine;
 
 // This script is a class library for all data classes that are used by state machine system
-namespace BeneathTheNight.Data.Database
+namespace PhoneInterfaceCode.Database
 {
     /// <summary>
     /// This class is the base class for all state machine initializer data classes. Data inside this class is used in

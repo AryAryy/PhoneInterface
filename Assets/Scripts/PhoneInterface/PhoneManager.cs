@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using BeneathTheNight.Data.Database;
-using BeneathTheNight.InputSystem;
-using BeneathTheNight.ScriptableObjects.PhoneInterface;
-using BeneathTheNight.StateMachine;
+using PhoneInterfaceCode.Database;
+using PhoneInterfaceCode.InputSystem;
+using PhoneInterfaceCode.ScriptableObjects.PhoneInterface;
+using PhoneInterfaceCode.StateMachine;
 using UnityEngine;
 
-namespace BeneathTheNight.PhoneInterface
+namespace PhoneInterfaceCode.PhoneInterface
 {
     /// <summary>
     /// This class is the main handler for phone interface
@@ -18,7 +18,6 @@ namespace BeneathTheNight.PhoneInterface
             Calls,
             Contacts,
             Messages,
-            Settings
         }
  
         private StateMachine.StateMachine stateMachine_;
@@ -38,7 +37,7 @@ namespace BeneathTheNight.PhoneInterface
         [SerializeField] private PhoneInterface_App_Contacts_Database appContactsDatabase;
         [SerializeField] private PhoneInterface_App_Messages_Database appMessagesDatabase;
 
-        private void Start()
+        private void Awake()
         {
             stateMachine_ = GetComponent<StateMachine.StateMachine>();
             InitializeStateMachine();
@@ -108,9 +107,6 @@ namespace BeneathTheNight.PhoneInterface
         /// <summary>
         /// Closing phone interface
         /// </summary>
-        private void ClosePhone()
-        {
-            interfaceObject.SetActive(false);
-        }
+        private void ClosePhone() => interfaceObject.SetActive(false);
     }
 }

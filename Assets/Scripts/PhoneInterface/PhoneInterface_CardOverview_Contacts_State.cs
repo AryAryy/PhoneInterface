@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Linq;
-using BeneathTheNight.Data.Database;
-using BeneathTheNight.Extensions;
-using BeneathTheNight.InputSystem;
-using BeneathTheNight.ScriptableObjects.PhoneInterface;
-using BeneathTheNight.StateMachine;
+using PhoneInterfaceCode.Database;
+using PhoneInterfaceCode.Extensions;
+using PhoneInterfaceCode.InputSystem;
+using PhoneInterfaceCode.ScriptableObjects.PhoneInterface;
+using PhoneInterfaceCode.StateMachine;
 
-namespace BeneathTheNight.PhoneInterface
+namespace PhoneInterfaceCode.PhoneInterface
 {
     /// <summary>
     /// This class handles phone interface in contacts card overview state

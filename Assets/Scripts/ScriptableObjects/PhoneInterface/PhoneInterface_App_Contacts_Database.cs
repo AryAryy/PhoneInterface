@@ -1,8 +1,8 @@
 using System.Collections.Generic;
-using BeneathTheNight.Data.Database;
+using PhoneInterfaceCode.Database;
 using UnityEngine;
 
-namespace BeneathTheNight.ScriptableObjects.PhoneInterface
+namespace PhoneInterfaceCode.ScriptableObjects.PhoneInterface
 {
     /// <summary>
     /// This class is the database for contacts

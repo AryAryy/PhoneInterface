@@ -1,11 +1,10 @@
-﻿using BeneathTheNight.Data.Database;
-using BeneathTheNight.Extensions;
-using BeneathTheNight.InputSystem;
-using BeneathTheNight.StateMachine;
-using DG.Tweening;
+﻿using PhoneInterfaceCode.Database;
+using PhoneInterfaceCode.Extensions;
+using PhoneInterfaceCode.InputSystem;
+using PhoneInterfaceCode.StateMachine;
 using UnityEngine;
 
-namespace BeneathTheNight.PhoneInterface
+namespace PhoneInterfaceCode.PhoneInterface
 {
     /// <summary>
     /// This class is the base class for all app overview states that use a card system
@@ -17,7 +16,7 @@ namespace BeneathTheNight.PhoneInterface
 
         private int upperCardIndex_, lowerCardIndex_;
         private bool animatorActive_;
-        private Tweener cardMoverTweener_;
+        private Coroutine cardMoverCo_;
         
         protected PhoneInterface_CardAppOverviewBase_State(StateMachine_InitializerData initializerData,
             StateMachine_Database database) : base(initializerData, database) { }
@@ -84,7 +83,7 @@ namespace BeneathTheNight.PhoneInterface
         {
             bool irrelevantAction = actionType != InputManager.PhoneInterfaceActionType.NavigationUp &&
                                     actionType != InputManager.PhoneInterfaceActionType.NavigationDown;
-            if (!canReceivePlayerInput || cardMoverTweener_ != null || irrelevantAction) return;
+            if (!canReceivePlayerInput || cardMoverCo_ != null || irrelevantAction) return;
 
             bool goUp = actionType == InputManager.PhoneInterfaceActionType.NavigationUp;
             bool goDown = actionType == InputManager.PhoneInterfaceActionType.NavigationDown;
@@ -115,10 +114,11 @@ namespace BeneathTheNight.PhoneInterface
 
             void ScrollCards(int moveDir)
             {
-                float pos = initializerDatabase.DistanceBetweenCards * moveDir;
-                cardMoverTweener_ = initializerDatabase.AppCardParent
-                    .DOMoveY(pos, initializerDatabase.CardScrollingSpeed).SetRelative(true)
-                    .OnComplete(() => cardMoverTweener_ = null);
+                var yPos = initializerDatabase.DistanceBetweenCards * moveDir;
+                var pos = new Vector3(initializerDatabase.AppCardParent.position.x,
+                    initializerDatabase.AppCardParent.position.y + yPos, initializerDatabase.AppCardParent.position.z);
+                cardMoverCo_ = CoroutineManager.Instance.MoveObject(initializerDatabase.AppCardParent, pos,
+                    initializerDatabase.CardScrollingSpeed, false);
             }
         }
         

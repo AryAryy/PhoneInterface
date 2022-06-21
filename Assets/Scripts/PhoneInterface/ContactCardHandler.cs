@@ -1,15 +1,15 @@
-﻿using TMPro;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.UI;
 
-namespace BeneathTheNight.PhoneInterface
+namespace PhoneInterfaceCode.PhoneInterface
 {
     /// <summary>
     /// This class manages each card that is used by phone interface contacts app
     /// </summary>
     public class ContactCardHandler : MonoBehaviour
     {
-        [SerializeField] private TextMeshPro contactName;
-        [SerializeField] private TextMeshPro contactNumber;
+        [SerializeField] private Text contactName;
+        [SerializeField] private Text contactNumber;
         [SerializeField] private SpriteRenderer backgroundRenderer;
         [SerializeField] private SpriteRenderer contactPictureRenderer;
 

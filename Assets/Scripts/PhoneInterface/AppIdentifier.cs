@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace BeneathTheNight.PhoneInterface
+namespace PhoneInterfaceCode.PhoneInterface
 {
     /// <summary>
     /// This class holds app type for each app icon, should be attached to all app icons

@@ -2,10 +2,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using BeneathTheNight.Data.Database;
+using PhoneInterfaceCode.Database;
 using UnityEngine;
 
-namespace BeneathTheNight.StateMachine
+namespace PhoneInterfaceCode.StateMachine
 {
     /// <summary>
     /// This class provides a state machine functionality, switching between states is handled by each state individually,

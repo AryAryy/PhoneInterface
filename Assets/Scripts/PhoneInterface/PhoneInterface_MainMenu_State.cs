@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using BeneathTheNight.Data.Database;
-using BeneathTheNight.Extensions;
-using BeneathTheNight.InputSystem;
-using BeneathTheNight.StateMachine;
+using PhoneInterfaceCode.Database;
+using PhoneInterfaceCode.Extensions;
+using PhoneInterfaceCode.InputSystem;
+using PhoneInterfaceCode.StateMachine;
 using UnityEngine;
 
-namespace BeneathTheNight.PhoneInterface
+namespace PhoneInterfaceCode.PhoneInterface
 {
     /// <summary>
     /// This class handles phone interface while it's in main menu state
@@ -22,7 +22,7 @@ namespace BeneathTheNight.PhoneInterface
         
         private PhoneInterface_MainMenu_InitializerData initializerData_;
 
-        private List<AppData> apps_ = new List<AppData>();
+        private readonly List<AppData> apps_ = new List<AppData>();
         private AppData activeApp_;
         private int activeAppIndex_;
 

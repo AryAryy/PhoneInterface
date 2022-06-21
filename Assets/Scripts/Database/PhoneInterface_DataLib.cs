@@ -1,10 +1,10 @@
 using System;
-using BeneathTheNight.PhoneInterface;
-using TMPro;
+using PhoneInterfaceCode.PhoneInterface;
 using UnityEngine;
+using UnityEngine.UI;
 
 // This script is a class library for all data classes that are used by phone interface system
-namespace BeneathTheNight.Data.Database
+namespace PhoneInterfaceCode.Database
 {
     /// <summary>
     /// This class holds data that is used to initialize main menu panel 
@@ -81,11 +81,11 @@ namespace BeneathTheNight.Data.Database
     {
         [SerializeField] private GameObject callsCardOverviewPanel;
         [SerializeField] private SpriteRenderer callsCardPictureRenderer;
-        [SerializeField] private TextMeshPro callsCardContactNameText;
+        [SerializeField] private Text callsCardContactNameText;
 
         public GameObject CallsCardOverviewPanel => callsCardOverviewPanel;
         public SpriteRenderer CallsCardPictureRenderer => callsCardPictureRenderer;
-        public TextMeshPro CallsCardContactNameText => callsCardContactNameText;
+        public Text CallsCardContactNameText => callsCardContactNameText;
     }
     
     /// This class holds data that is used to initialize contacts card overview data
@@ -94,15 +94,15 @@ namespace BeneathTheNight.Data.Database
     {
         [SerializeField] private GameObject contactCardOverviewPanel;
         [SerializeField] private SpriteRenderer contactCardPictureRenderer;
-        [SerializeField] private TextMeshPro contactCardNameText;
-        [SerializeField] private TextMeshPro contactCardNumberText;
-        [SerializeField] private TextMeshPro contactCardContactDescriptionText;
+        [SerializeField] private Text contactCardNameText;
+        [SerializeField] private Text contactCardNumberText;
+        [SerializeField] private Text contactCardContactDescriptionText;
 
         public GameObject ContactCardOverviewPanel => contactCardOverviewPanel;
         public SpriteRenderer ContactCardPictureRenderer => contactCardPictureRenderer;
-        public TextMeshPro ContactCardNameText => contactCardNameText;
-        public TextMeshPro ContactCardNumberText => contactCardNumberText;
-        public TextMeshPro ContactCardContactDescriptionText => contactCardContactDescriptionText;
+        public Text ContactCardNameText => contactCardNameText;
+        public Text ContactCardNumberText => contactCardNumberText;
+        public Text ContactCardContactDescriptionText => contactCardContactDescriptionText;
     }
     
     /// This class holds data that is used to initialize messages card overview data
@@ -111,13 +111,13 @@ namespace BeneathTheNight.Data.Database
     {
         [SerializeField] private GameObject messagesCardOverviewPanel;
         [SerializeField] private SpriteRenderer messagesCardPictureRenderer;
-        [SerializeField] private TextMeshPro messagesCardContactNameText;
-        [SerializeField] private TextMeshPro messagesCardFullMessageText;
+        [SerializeField] private Text messagesCardContactNameText;
+        [SerializeField] private Text messagesCardFullMessageText;
 
         public GameObject MessagesCardOverviewPanel => messagesCardOverviewPanel;
         public SpriteRenderer MessagesCardPictureRenderer => messagesCardPictureRenderer;
-        public TextMeshPro MessagesCardContactNameText => messagesCardContactNameText;
-        public TextMeshPro MessagesCardFullMessageText => messagesCardFullMessageText;
+        public Text MessagesCardContactNameText => messagesCardContactNameText;
+        public Text MessagesCardFullMessageText => messagesCardFullMessageText;
     }
     
     

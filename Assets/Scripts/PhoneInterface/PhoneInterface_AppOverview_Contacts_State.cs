@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using BeneathTheNight.Data.Database;
-using BeneathTheNight.InputSystem;
-using BeneathTheNight.ScriptableObjects.PhoneInterface;
+using PhoneInterfaceCode.Database;
+using PhoneInterfaceCode.InputSystem;
+using PhoneInterfaceCode.ScriptableObjects.PhoneInterface;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
-namespace BeneathTheNight.PhoneInterface
+namespace PhoneInterfaceCode.PhoneInterface
 {
     /// <summary>
     /// This class handles phone interface in contacts app overview state
